@@ -64,7 +64,7 @@ def print_turtle_position(t):
 def draw_square(t, start_x, start_y, length, rotation_direction, fill_color):
     """
     Draw a square of a given side length, starting from a given position.
-    - Use the 'pick_up_and_move_turtle' function definied in this file to move the turtle to its starting position.
+    - Use the 'pick_up_and_move_turtle' function definied in this file to move the turtle to its starting position. :3
     - Use the turtle's 'forwards' function to move the turtle forwards.
     - Use the turtle's 'left' or 'right' functions to rotate the turtle in the appropriate direction.
     - Use the turtle's 'fillcolor' to set the fill color, and 'begin_fill', and 'end_fill' to control which lines drawn by the turtle should be filled with color.
@@ -78,6 +78,14 @@ def draw_square(t, start_x, start_y, length, rotation_direction, fill_color):
     :param rotation_direction: Either 'left' or 'right', indicating the direction the turtle should rotate after it completes each line of the rectangle.
     :param fill_color: The color with which to fill in the area drawn by the turtle.
     """
+
+
+    pick_up_and_move_turtle(t, start_x, start_y)
+    for a in range(4):
+        print_turtle_position(t)
+        turtle.forward(float(length))
+        turtle.left(float(rotation_direction))
+    turtle.fillcolor(fill_color)
 
 
 def draw_star(
@@ -100,3 +108,14 @@ def draw_star(
     :param initial_rotation_direction: The direction of the first rotation the turtle should make when drawing each point, either 'left' or 'right'.
     :param fill_color: The color with which to fill in the area drawn by the turtle.
     """
+
+
+
+    pick_up_and_move_turtle(t, start_x, start_y)
+    for a in range(10):
+        turtle.forward(length)
+        turtle.right(angle)
+
+    turtle.fillcolor(fill_color)
+
+
